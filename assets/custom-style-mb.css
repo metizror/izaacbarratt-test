@@ -1,0 +1,230 @@
+.gradient {
+    .color-scheme-1 {
+      .product.product--large {
+        .product__info-wrapper {
+          .subscription-wrap-mb {
+            background-color: var(--background-color);
+            border: 3px solid var(--main-border-color);
+            border-radius: 10px;
+            padding: 5px;
+            .variant-label-txt{
+              font-size:18px;
+              padding:5px 0px;
+              }
+            .product-form__input {
+              display: flex;
+  
+              .form__label-mb {
+                width: 100%;
+                text-align: center;
+                font-size: 24px;
+                color: var(--rc-active-color);
+                font-weight: 600;
+                margin-bottom: 20px;
+              }
+  
+              input:checked + label {
+                background-color: var(--label-bg-color);
+                border: 2px solid var(--main-border-color);
+                color: var(--rc-active-color);
+  
+                .bs-devshop__oldPrice {
+                  background-color: var(--variant-price-text-color);
+                  color: var(--gradient-background);
+                }
+  
+                .bs-devshop__save-price {
+                  background-color: var(--price-save-text-color);
+                  color: var(--gradient-background);
+                  border-radius: 2px;
+                  font-size: 12px;
+                }
+              }
+  
+              label {
+                border-radius: 10px;
+                background-color: var(--variant-bg);
+                border: 2px solid var(--variant-border);
+                position: relative;
+                padding: 2rem 0.5rem;
+                color: var(--variant-text-color);
+                width: calc(100% / 3);
+                font-size: 20px;
+  
+                .bs-devshop__oldPrice {
+                  position: absolute;
+                  top: -20px;
+                  background-color: var(--variant-bg);
+                  border-radius: 20px;
+                  padding: 5px 4px;
+                  width: calc(100% - 15px);
+                  left: 7px;
+                  font-size: 12px;
+                }
+  
+                .bs-devshop__save-price {
+                  display: flex;
+                  padding: 5px 2px;
+                  font-size: 11px;
+                }
+              }
+            }
+  
+            .bs-devshop__selling-plan_heading {
+              width: 100%;
+              text-align: center;
+              font-size: 24px;
+              color: var(--rc-active-color);
+              font-weight: 600;
+            }
+  
+            #selling-plan-radios {
+              display: flex;
+              flex-direction: column;
+  
+              label:has(#rc-radio1) {
+                background-color: var(--variant-bg);
+                padding: 20px;
+                border: 2px solid var(--variant-border);
+                border-bottom: unset;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+  
+                input {
+                  accent-color: var(--variant-text-color);
+                  width: 22px;
+                  height: 22px;
+                }
+  
+                span {
+                  font-size: 20px;
+                }
+              }
+  
+              label:has([value="subscription"]) {
+                background-color: var(--label-bg-color);
+                border: 2px solid var(--main-border-color);
+                border-top: unset;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                display: flex;
+                padding: 20px;
+                padding-right: 0px;
+  
+                input {
+                  accent-color: var(--variant-text-color);
+                  width: 35px;
+                  height: 35px;
+                }
+  
+                .bs-devshop__main-subscription {
+                  .bs-devshop__subscription-option {
+                    display: flex;
+                    gap: 10px;
+                    align-items: baseline;
+                    justify-content: space-between;
+  
+                    .bs-devshop__subscription_text {
+                      font-size: 20px;
+                      line-height: normal;
+                      width: 50%;
+  
+                      .bs-devshop_sc_price {
+                        color: var(--main-border-color);
+                      }
+                    }
+  
+                    .bs-devshop__subscription__pricing_wrapper {
+                      color: var(--rc-active-color);
+                      width: 35%;
+                      display: flex;
+                      flex-direction: column;
+  
+                      .bs-devshop__subscription-pricing {
+                        font-size: 24px;
+                        line-height: normal;
+                        color: var(--variant-price-text-color);
+                        font-weight: 500;
+  
+                        .bs-devshop__saving {
+                          font-size: 10px;
+                          color: var(--rc-active-color);
+                          background-color: var(--main-border-color);
+                          border-radius: 2px;
+                          padding: 2px 0px;
+                        }
+  
+                        strike {
+                          font-size: 10px;
+                          color: var(--rc-active-color);
+                        }
+                      }
+  
+                      .bs-devshop__subscription_interval {
+                        color: var(--label-nr-text-color);
+                        font-size: 11px;
+                        line-height: normal;
+                      }
+                    }
+                  }
+  
+                  .bs-devshop__sub-text {
+                    width: 50%;
+                    display: block;
+                    line-height: normal;
+                    font-size: 11px;
+                  }
+                }
+              }
+            }
+  
+            product-form {
+              form {
+                .product-form__buttons {
+                  .product-form__submit {
+                    background-color: var(--main-border-color);
+                    border: 2px solid var(--add-cart-border);
+                    border-radius: 10px;
+                    span img {
+                      margin-right: 10px;
+                    }
+                  }
+                  .product-form__submit::after {
+                    display: none;
+                  }
+                }
+              }
+            }
+  
+            @media only screen and (min-width: 750px) and (max-width: 1100px) {
+              .product-form__input {
+                flex-wrap: wrap;
+                label {
+                  margin-bottom: 20px;
+                }
+              }
+            }
+  
+            @media only screen and (max-width: 750px) {
+              #selling-plan-radios label:has([value="subscription"]) input {
+                width: 22px;
+              }
+              .product-form__buttons {
+                max-width: 100%;
+              }
+              .product-form__input {
+                margin: 0 auto;
+                label {
+                  .bs-devshop__oldPrice {
+                    top: -15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  
